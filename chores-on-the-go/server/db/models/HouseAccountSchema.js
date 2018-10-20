@@ -32,7 +32,9 @@ var HouseAccountSchema = new Schema({
     },
     password: {
         // tba
-    }
+    },
+    
+        collection: "HouseAccount"
   //will need to be linked with the users (roommateSchema)
 });
 

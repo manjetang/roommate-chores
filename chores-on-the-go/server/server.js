@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const PORT = 3000;
 
 // Requiring the `Roommate` model for accessing the `RoommateSchema` collection
-const Roommate = require("./RoommateSchema.js");
+const Roommate = require("./db/models/RoommateSchema.js");
 
 // Initialize Express
 const app = express();
@@ -21,17 +21,17 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/userdb", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/roommateChores", { useNewUrlParser: true });
 
 // Routes
 
 // Route to post our form submission to mongoDB via mongoose
 app.post("/submit", function(req, res) {
   // Create a new user using req.body
-  User.create(req.body)
-    .then(function(dbUser) {
+  Roommate.create(req.body)
+    .then(function(Roommate) {
       // If saved successfully, send the the new User document to the client
-      res.json(dbUser);
+      res.json(Roommate);
     })
     .catch(function(err) {
       // If an error occurs, send the error to the client

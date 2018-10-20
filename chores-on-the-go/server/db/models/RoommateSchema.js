@@ -56,7 +56,9 @@ var RoommateSchema = new Schema({
         type: Date,
         default: Date.now
     }
+    // collection :"Roommate"
 });
+
 
 // This creates our model from the above schema, using mongoose's model method
 var Roommate = mongoose.model("Roommate", RoommateSchema);

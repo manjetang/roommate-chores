@@ -41,7 +41,8 @@ var RoommateHistorySchema = new Schema({
     dateCompleted: {
         type: Schema.Types.ObjectId,
         ref: "dateCompleted"
-    }
+    },
+    collection:"RoommateHistory"
 });
 
 // This creates our model from the above schema, using mongoose's model method

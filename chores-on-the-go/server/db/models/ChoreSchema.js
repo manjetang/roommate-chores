@@ -46,7 +46,10 @@ const ChoreSchema = new Schema({
       // Error Message
       "Description should be longer."
     ]
-  }
+  },
+  
+  collection: "Chores"
+
 });
 
 // This creates our model from the above schema, using mongoose's model method
