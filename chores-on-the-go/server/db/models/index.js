@@ -1,7 +1,7 @@
 module.exports = {
-    Roommate: require("./RoommateShcema"),
+    Roommate: require("./RoommateSchema"),
     Chores: require("./ChoreSchema"),
     HouseAccount: require("./HouseAccountSchema"),
-    RoommateHistory: require("./RoommateHistoryShcema")
+    RoommateHistory: require("./RoommateHistory")
   };
   
